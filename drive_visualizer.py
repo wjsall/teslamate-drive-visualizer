@@ -26,6 +26,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from matplotlib import patheffects
 import os
+import platform
 from tqdm import tqdm
 from datetime import timedelta
 import matplotlib.font_manager as fm
@@ -33,7 +34,6 @@ from scipy import interpolate
 
 # 检查并设置可用的字体 - 自动适配 Mac / Windows / Linux
 def setup_font():
-    import platform
     system = platform.system()
 
     if system == 'Darwin':  # macOS
@@ -85,13 +85,14 @@ setup_font()
 # 【网络连接】TeslaMate 运行在局域网其他设备（如 NAS、树莓派）：
 #   DB_HOST = "192.168.1.100"   ← 填写那台设备的 IP
 #
-# 密码在 TeslaMate 的 docker-compose.yml 中 DATABASE_URL 一行可找到
+# 密码在 TeslaMate 的 docker-compose.yml 中 POSTGRES_PASSWORD= 后面
+# 端口需与 docker-compose.yml 中 ports 左边的值一致（详见 README）
 # ==============================
 DB_HOST = "YOUR_TESLAMATE_IP"       # 本地填 "localhost"，远程填设备 IP
-DB_PORT = 55432                      # 数据库端口（TeslaMate 默认 55432）
+DB_PORT = 55432                      # 与 docker-compose.yml ports 左边端口一致（可自定义）
 DB_NAME = "teslamate"                # 数据库名称（默认不需要修改）
 DB_USER = "teslamate"                # 数据库用户名（默认不需要修改）
-DB_PASSWORD = "YOUR_DB_PASSWORD"     # 数据库密码
+DB_PASSWORD = "YOUR_DB_PASSWORD"     # 数据库密码（docker-compose.yml 中 POSTGRES_PASSWORD=）
 
 # ==============================
 # 🎬 视频参数

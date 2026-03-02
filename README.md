@@ -1,4 +1,4 @@
-# TeslaMate 行程可视化工具 | TeslaMate Drive Visualizer 🚗⚡
+# TeslaMate Drive Visualizer 🚗⚡
 
 将 TeslaMate 行程数据渲染成带实时数据叠加的视频，专为**绿幕扣像合成**设计。
 
@@ -9,19 +9,6 @@
 ---
 
 ## 📸 效果预览
-
-### 实时数据叠加画面
-
-![预览1](images/preview1.jpg)
-*底部数据栏显示：速度、功率、海拔、续航、电量、气温、本次行程*
-
-![预览2](images/preview3.jpg)
-*四轮胎压实时显示，颜色区分正常/偏低/偏高*
-
-![预览3](images/preview2.jpg)
-*行程总结画面：里程、时间、平均速度、能耗统计*
-
-### 画面布局说明
 
 视频画面包含：
 
@@ -289,9 +276,9 @@ teslamate-drive-visualizer/
 
 **Q: 连接数据库失败**
 - 确认 `DB_HOST` 填写正确（本地用 `localhost`，远程用设备 IP）
-- 确认 TeslaMate 的 PostgreSQL 端口 55432 可访问
-- 检查密码是否正确（见 `docker-compose.yml` 中的 `DATABASE_URL`）
-- 网络连接时确认两台设备在同一局域网，且防火墙未拦截 55432 端口
+- 确认已按 README「🔌 连接方式」章节在 docker-compose.yml 中添加了 `ports` 映射并重启
+- 检查密码是否正确（见 `docker-compose.yml` 中的 `POSTGRES_PASSWORD=`）
+- 网络连接时确认两台设备在同一局域网，且防火墙未拦截对应端口
 
 **Q: Windows 提示找不到 python3**
 - Windows 通常使用 `python`（不带 3）：`python drive_visualizer.py`
@@ -349,15 +336,3 @@ MIT License — 详见 [LICENSE](LICENSE) 文件。
 
 - [TeslaMate](https://github.com/teslamate-org/teslamate) — 优秀的特斯拉数据记录工具
 - [Matplotlib](https://matplotlib.org/) — 视频帧渲染
-
----
-
-## 💖 赞助支持
-
-如果这个项目对你有帮助，欢迎赞助支持！
-
-| 微信支付 | 支付宝 |
-|:--------:|:------:|
-| ![微信](images/wechat-donate.jpg) | ![支付宝](images/alipay-donate.jpg) |
-
-你的支持将帮助项目持续更新和维护！🙏
