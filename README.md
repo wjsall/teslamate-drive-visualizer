@@ -349,3 +349,15 @@ MIT License — 详见 [LICENSE](LICENSE) 文件。
 
 - [TeslaMate](https://github.com/teslamate-org/teslamate) — 优秀的特斯拉数据记录工具
 - [Matplotlib](https://matplotlib.org/) — 视频帧渲染
+
+---
+
+## 💖 赞助支持
+
+如果这个项目对你有帮助，欢迎赞助支持！
+
+| 微信支付 | 支付宝 |
+|:--------:|:------:|
+| ![微信](images/wechat-donate.jpg) | ![支付宝](images/alipay-donate.jpg) |
+
+你的支持将帮助项目持续更新和维护！🙏
