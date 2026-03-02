@@ -1,4 +1,4 @@
-# TeslaMate Drive Visualizer 🚗⚡
+# TeslaMate 行程可视化工具 | TeslaMate Drive Visualizer 🚗⚡
 
 将 TeslaMate 行程数据渲染成带实时数据叠加的视频，专为**绿幕扣像合成**设计。
 
