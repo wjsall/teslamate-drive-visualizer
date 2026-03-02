@@ -1,0 +1,28 @@
+# 视频输出文件（体积大，不提交）
+*.mp4
+*.mov
+*.avi
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 环境变量（若日后改用 .env 配置）
+.env
+.env.local
